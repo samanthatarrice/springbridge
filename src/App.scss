@@ -95,20 +95,25 @@ body {
   }
 }
 
-.enrollment-btn {
-  font-size: 2rem;
+.tour-btn {
+  font-size: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
   background: $gold;
   border: none;
 }
 
-.enrollment-btn:hover, .enrollment-btn:focus {
+.tour-btn:hover, .tour-btn:focus {
   background: $red;
 }
 
-.enrollment-btn:active {
+.tour-btn:active {
   background: $navy;
+}
+
+.tour-form-btn {
+  background: $red;
+  font-weight: bold;
 }
 
 /*-----------------------------
