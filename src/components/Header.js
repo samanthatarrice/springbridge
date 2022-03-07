@@ -1,7 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Navbar, Container, Nav, NavDropdown, Offcanvas, Form, FormControl, Button} from 'react-bootstrap';
+import TourModal from './TourModal';
 
 function Header() {
+
+  const [tourModal, setTourModal] = useState(false);
+
+  const handleCloseTourModal = () => setTourModal(false);
+  const handleShowTourModal = () => setTourModal(true);
+
   return (
     <header>
       <Navbar expand={false} collapseOnSelect fixed='top'>
@@ -70,13 +77,15 @@ function Header() {
               <h1>Springbridge</h1>
               <h2>International School</h2>
               <h3>Bilingual Education</h3>
-              <Button className='enrollment-btn rounded-pill p-3 my-auto w-100 d-md-block d-none mt-4'>{'Enrollment & Tours'}</Button>
+              <Button className='enrollment-btn rounded-pill p-3 my-auto w-100 mt-4' onClick={handleShowTourModal}>{'Enrollment & Tours'} </Button>
+              <TourModal tourModal={tourModal} handleCloseTourModal={handleCloseTourModal} />
             </div>
           </div>
         </div>
       </div>
+      
     </header>
-  )
+  );
 }
 
 export default Header;

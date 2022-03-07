@@ -1,42 +1,45 @@
 import React, {Fragment} from 'react';
-import {Button, Card} from 'react-bootstrap';
+import {Card} from 'react-bootstrap';
 import Header from './Header';
+import Footer from './Footer';
 
 function Home() {
   return (
     <Fragment>
       <Header />
-
-      {/* Button */}
-      <div className='p-4 py-5'>
-        <Button className='enrollment-btn rounded-pill p-3 my-auto w-100 d-md-none'>{'Enrollment & Tours'}</Button>
-      </div>
+      {/*
+          <div className='p-4 py-5 d-md-none'>
+            <Button className='enrollment-btn rounded-pill p-3 my-auto w-100'>{'Enrollment & Tours'}</Button>
+          </div>
+        */}
 
       {/* Home Header */}
-      <h1 className='page-title text-center'>Welcome to Springbridge!</h1>
+      <h1 className='page-title text-center p-5'>Welcome to Springbridge!</h1>
       <p className='page-description text-center'>We are a Japanese/English or Mandarin/English bilingual independent school in the heart of the Silicon Valley.</p>
       
       {/* Quick Facts - Change later so facts aren't hardcoded?*/}
-      <div className='d-flex flex-column flex-lg-row align-items-center'>
-        <div className='quick-fact-container text-center rounded-circle d-flex flex-column justify-content-center'>
-          <h2 className='quick-fact-title'>1/6</h2>
-          <p className='fs-3'>Teacher/Student Ratio</p>
-          <img src='./images/teacher.png' />
+      <article className='quick-facts'>
+        <div className='d-flex flex-column flex-lg-row align-items-center'>
+          <div className='quick-fact-container text-center rounded-circle d-flex flex-column justify-content-center'>
+            <h2 className='quick-fact-title'>1/6</h2>
+            <p className='fs-3'>Teacher/Student Ratio</p>
+            <img src='./images/teacher.png' />
+          </div>
+          <div className='quick-fact-container text-center rounded-circle d-flex flex-column justify-content-center'>
+            <h2 className='quick-fact-title'>16</h2>
+            <p className='fs-3'>Average students/class</p>
+            <img src='./images/students.png' />
+          </div>
+          <div className='quick-fact-container text-center rounded-circle d-flex flex-column justify-content-center'>
+            <h2 className='quick-fact-title'>7</h2>
+            <p className='fs-3'>Average Years Teaching</p>
+            <img src='./images/apple.png' />
+          </div>
         </div>
-        <div className='quick-fact-container text-center rounded-circle d-flex flex-column justify-content-center'>
-          <h2 className='quick-fact-title'>16</h2>
-          <p className='fs-3'>Average students/class</p>
-          <img src='./images/students.png' />
-        </div>
-        <div className='quick-fact-container text-center rounded-circle d-flex flex-column justify-content-center'>
-          <h2 className='quick-fact-title'>7</h2>
-          <p className='fs-3'>Average Years Teaching</p>
-          <img src='./images/apple.png' />
-        </div>
-      </div>
+      </article>
 
       {/* Testimonies */}
-      <Card className='testimonies p-3'>
+      <Card className='testimonies p-3 m-lg-5'>
         <Card.Body>
           <img className='quote' src='./images/quote.png' />
           <figure>
@@ -52,7 +55,7 @@ function Home() {
       </Card>
       
       {/* Yelp Reviews */}
-      <div className='d-flex justify-content-center align-items-center m-5'>
+      <div className='yelp-review-icons d-flex justify-content-center align-items-center m-5'>
         <div className='yelp-logo mr-3'>
           <img className='w-100' src='./images/yelp.png' />
         </div>
@@ -62,32 +65,32 @@ function Home() {
       </div>
 
       {/* Location */}
-      <Card className='locations text-center p-5'>
+      <Card className='locations text-center p-5 m-lg-5'>
         <Card.Title className='locations-title mb-4'>Locations</Card.Title>
         <Card.Body className='d-flex flex-column flex-lg-row'>
-          <div className="mapouter">
+          <div className="map-container">
             <div className="gmap_canvas">
-              <iframe width="600" height="500" id="gmap_canvas" src={'https://maps.google.com/maps?q=1980%20Hamilton%20Ave%20San%20Jose,%20CA%2095125&t=&z=13&ie=UTF8&iwloc=&output=embed'} frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+              <iframe id="gmap_canvas" src={'https://maps.google.com/maps?q=1980%20Hamilton%20Ave%20San%20Jose,%20CA%2095125&t=&z=13&ie=UTF8&iwloc=&output=embed'} frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe>
             </div>
           </div>
           <Card.Text className='location-text mt-5 w-100'>
-            <div className=''>
-              <p className='fw-bold'>Preschool - Kindergarten</p>
-              <p>1625 W. Campbell Ave</p>
-              <p>Campbell, CA 95008</p>
-            </div>
-            <div className='mt-5'>
-              <p className='fw-bold'>{'Elementary & Middle'}</p>
-              <p>1625 W. Campbell Ave</p>
-              <p>Campbell, CA 95008</p>
-            </div>
+            <address>
+              <span className='fw-bold'>Preschool - Kindergarten</span> <br />
+              1625 W. Campbell Ave <br/>
+              Campbell, CA 95008
+            </address>
+            <address className='mt-5'>
+              <span className='fw-bold'>{'Elementary & Middle'}</span> <br/>
+              1625 W. Campbell Ave <br/>
+              Campbell, CA 95008
+            </address>
           </Card.Text>
         </Card.Body>
       </Card>
 
-
+      <Footer />
     </Fragment>
-  )
+  );
 }
 
 export default Home;

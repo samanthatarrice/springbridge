@@ -15,8 +15,8 @@ $display-font: 'Zilla Slab', serif;
   font-family: $display-font;
   font-size: 4rem;
   font-weight: bold;
-  color: $red;
-  margin: 4vw;
+  color: white;
+  background: $navy;
 }
 
 .page-description {
@@ -95,10 +95,6 @@ body {
   }
 }
 
-/*-----------------------------
-            Home
------------------------------*/
-
 .enrollment-btn {
   font-size: 2rem;
   font-weight: bold;
@@ -107,9 +103,17 @@ body {
   border: none;
 }
 
-.enrollment-btn:hover {
+.enrollment-btn:hover, .enrollment-btn:focus {
   background: $red;
 }
+
+.enrollment-btn:active {
+  background: $navy;
+}
+
+/*-----------------------------
+            Home
+-----------------------------*/
 
 .quick-fact-container {
   width: 70vw;
@@ -165,7 +169,7 @@ body {
 }
 
 .yelp-logo {
-  width: 15%; 
+  width: 12%; 
 }
 
 .locations {
@@ -179,5 +183,34 @@ body {
 
   .location-text {
     font-size: 1.75rem;
+  }
+
+  .map-container {
+    width: 100%;
+    height: 30rem;
+
+
+    #gmap_canvas {
+      width: 100%;
+      height: 30rem;
+    }
+  }
+}
+
+footer {
+  background: $navy;
+  color: white;
+
+  .logo-lg {
+    width: 15rem;
+  }
+
+  .footer-contact-container,
+  .logo-container,
+  .social-media-container,
+  .prek-address,
+  .elem-address,
+  .attribution-container {
+    width: 20rem;
   }
 }
