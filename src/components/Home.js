@@ -15,7 +15,7 @@ function Home() {
 
       {/* Home Header */}
       <h1 className='page-title text-center p-5'>Welcome to Springbridge!</h1>
-      <p className='page-description text-center'>We are a Japanese/English or Mandarin/English bilingual independent school in the heart of the Silicon Valley.</p>
+      <p className='page-description text-center w-75 m-auto my-5'>We are a Japanese/English or Mandarin/English bilingual independent school in the heart of the Silicon Valley.</p>
       
       {/* Quick Facts - Change later so facts aren't hardcoded?*/}
       <article className='quick-facts'>
@@ -49,20 +49,13 @@ function Home() {
             <figcaption className='blockquote-footer mt-4 text-center fs-6'>
               Happy parent from<cite title='Source Title'> Yelp</cite>
             </figcaption>
+            <a className='m-auto text-center w-25 mt-5 d-block' href='https://www.yelp.com/biz/springbridge-international-school-campbell' target='_blank'>
+              <img className='w-100' alt="Springbridge International School" src="https://dyn.yelpcdn.com/extimg/en_US/rrc/2RP3xzZs6LeA_VL6BuMUUw.png" />
+            </a>
           </figure>
           <img className='quote' src='./images/quote.png' />
         </Card.Body>
       </Card>
-      
-      {/* Yelp Reviews */}
-      <div className='yelp-review-icons d-flex justify-content-center align-items-center m-5'>
-        <div className='yelp-logo mr-3'>
-          <img className='w-100' src='./images/yelp.png' />
-        </div>
-        <div className='w-25 ml-3'>
-          <img className='w-100' alt="Springbridge International School" src="https://dyn.yelpcdn.com/extimg/en_US/rrc/2RP3xzZs6LeA_VL6BuMUUw.png" />
-        </div>
-      </div>
 
       {/* Location */}
       <Card className='locations text-center p-5 m-lg-5'>

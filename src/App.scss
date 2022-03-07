@@ -7,6 +7,10 @@ $gold: #EEC373;
 
 $display-font: 'Zilla Slab', serif;
 
+a {
+  color: white;
+}
+
 /*-----------------------------
             Header
 -----------------------------*/
@@ -114,6 +118,10 @@ body {
 .tour-form-btn {
   background: $red;
   font-weight: bold;
+}
+
+.tour-form-btn:hover, .tour-form-btn:focus {
+  background: $red;
 }
 
 /*-----------------------------

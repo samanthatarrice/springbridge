@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import {Navbar, Container, Nav, NavDropdown, Offcanvas, Form, FormControl, Button} from 'react-bootstrap';
-import TourModal from './TourModal';
+import {Navbar, Container, Nav, NavDropdown, Offcanvas, Form, FormControl, Button, Modal} from 'react-bootstrap';
+import TourForm from './TourForm';
 
 function Header() {
 
@@ -29,7 +29,8 @@ function Header() {
   
   const handleTourFormSubmit = (event) => {
     event.preventDefault();
-    console.log(tourFormData)
+    console.log(tourFormData);
+    handleCloseTourModal();
   }
 
   return (
@@ -101,13 +102,24 @@ function Header() {
               <h2>International School</h2>
               <h3>Bilingual Education</h3>
               <Button className='tour-btn rounded-pill p-3 my-auto w-100 mt-4' onClick={handleShowTourModal}>Schedule a tour!</Button>
-              <TourModal 
-                tourModal={tourModal} 
-                handleCloseTourModal={handleCloseTourModal}
-                tourFormData={tourFormData}
-                handleTourFormChange={handleTourFormChange} 
-                handleTourFormSubmit={handleTourFormSubmit}
-              />
+
+              <Modal className='tour-modal' show={tourModal} onHide={handleCloseTourModal} size='sm' >
+                <Modal.Header className='border-0' closeButton></Modal.Header>
+                <Modal.Header className='pt-0'>
+                  <Modal.Title className='modal-title text-center w-100'>Schedule a tour today!</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  <TourForm 
+                    tourFormData={tourFormData}
+                    handleTourFormChange={handleTourFormChange}
+                  />
+                </Modal.Body>
+                <Modal.Footer>
+                  <Button form='tour-form' className='tour-form-btn rounded-pill m-auto btn-lg border-0 w-100 my-2' onClick={handleTourFormSubmit}>
+                    Submit Request
+                  </Button>
+                </Modal.Footer>
+              </Modal>  
             </div>
           </div>
         </div>

@@ -36,8 +36,9 @@ function Footer() {
         </div>
         <div className='attribution-container text-center'>
           <p className='fw-bold'>Springbridge International School</p>
+          <a>{'Web Design & Dev by Samantha Tarrice'}</a>
           <p>©️ 2022</p>
-          <p>All Rights Reserved</p>
+          <a href="https://www.flaticon.com/" title="Flaticon">Icons from www.flaticon.com'</a>
         </div>
       </div>
     </footer>
