@@ -20,6 +20,8 @@ a {
   font-family: $display-font;
   font-weight: bold;
   color: white;
+  text-align: center;
+  padding: 5vw;
 }
 
 .page-title {
@@ -27,10 +29,18 @@ a {
   font-size: 3rem;
 }
 
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: $display-font;
+  color: $green;
+  text-align: center;
+  margin-bottom: 4vw;
+}
+
 .page-description {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   margin: 6vw auto;
-  padding: 0 3vw;
 }
 
 /*-----------------------------
@@ -89,16 +99,19 @@ a {
   }
 
   h1 {
-    font-size: 4.5rem;
+    // font-size: 4.5rem;
+    font-size: 5.5vw;
     color: $green;
   }
 
   h2 {
-    font-size: 2.5rem;
+    // font-size: 2.5rem;
+    font-size: 3vw;
   }
 
   h3 {
-    font-size: 2rem;
+    // font-size: 2rem;
+    font-size: 2.5vw;
     color: $red;
     text-transform: uppercase;
   }
@@ -220,6 +233,20 @@ a {
   }
 }
 
+/*-----------------------------
+      Bilingual Overview
+-----------------------------*/
+
+button.accordion-button {
+  font-size: 1.75rem;
+  font-family: $display-font;
+  font-weight: bold;
+  color: $green;
+}
+
+/*---------------------------*/
+
+
 footer {
   background: $navy;
   color: white;
@@ -235,5 +262,31 @@ footer {
   .elem-address,
   .attribution-container {
     width: 20rem;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+
+  .hero {
+    h1 {
+      font-size: 9vw;
+    }
+
+    h2 {
+
+      font-size: 5.5vw;
+    }
+
+    h3 {
+
+      font-size: 4.5vw;
+
+    }
+  }
+
+  .tour-btn {
+    font-size: 1rem;
   }
 }

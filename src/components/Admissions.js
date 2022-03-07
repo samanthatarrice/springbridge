@@ -8,7 +8,7 @@ function Admissions() {
       <Header />
       
       <section>
-        <h1>{'Admissions & Tuition'}</h1>
+        <h1 className='page-title'>{'Admissions & Tuition'}</h1>
       </section>
 
       <Footer />

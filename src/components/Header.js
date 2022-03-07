@@ -40,6 +40,8 @@ function Header() {
 
   return (
     <header>
+
+      {/* Navigation */}
       <Navbar expand={false} collapseOnSelect fixed='top'>
         <Container fluid>
           <Navbar.Brand href='#'>
@@ -93,13 +95,13 @@ function Header() {
         </Container>
       </Navbar>
         
-
+      {/* Hero */}
       <section className='hero container-fluid d-flex flex-column-reverse flex-lg-row'>
         <div className='col-lg-6 p-0'>
           <img className='w-100' src='./images/kids-field.jpg' />
         </div>
         <div className='col-lg-6 p-5 d-flex align-items-center'>
-          <div className='d-flex align-items-center justify-content-center'>
+          <div className='header-logo-name d-flex align-items-center justify-content-center'>
             <img className='owl' src='./images/owl.png' />
             <div className='p-2 text-center'>
               <h1>Springbridge</h1>
