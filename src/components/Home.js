@@ -14,8 +14,8 @@ function Home() {
         */}
 
       {/* Home Header */}
-      <h1 className='page-title text-center p-5'>Welcome to Springbridge!</h1>
-      <p className='page-description text-center w-75 m-auto my-5'>We are a Japanese/English or Mandarin/English bilingual independent school in the heart of the Silicon Valley.</p>
+      <h1 className='home-page-title text-center p-5'>Welcome to Springbridge!</h1>
+      <p className='page-description text-center m-auto my-5 fs-2 w-75'>We are a Japanese/English or Mandarin/English bilingual independent school in the heart of the Silicon Valley.</p>
       
       {/* Quick Facts - Change later so facts aren't hardcoded?*/}
       <article className='quick-facts'>
@@ -36,6 +36,10 @@ function Home() {
             <img src='./images/apple.png' />
           </div>
         </div>
+      </article>
+
+      <article className='page-description w-75'>
+        Springbridge’s carefully integrated curriculum strives to achieve academic excellence on par with the top private schools in Silicon Valley as measured by standardized test scores. Motivated, capable students suited for our bilingual curriculum and multicultural environment are carefully selected. Our students are immersed in authentic Japanese, Chinese and American curricula and taught by native speakers during the course of the school day. Saturday and after school classes are not required, freeing time for family and personal pursuits.
       </article>
 
       {/* Testimonies */}

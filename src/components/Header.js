@@ -1,6 +1,11 @@
 import React, {useState} from 'react';
+import {Routes, Route, Link} from 'react-router-dom';
 import {Navbar, Container, Nav, NavDropdown, Offcanvas, Form, FormControl, Button, Modal} from 'react-bootstrap';
+import Home from './Home';
 import TourForm from './TourForm';
+import BilingualOverview from './BilingualOverview';
+
+/* Update Navbar so options show in bar on large and up screens */
 
 function Header() {
 
@@ -49,32 +54,26 @@ function Header() {
             scroll={true}
           >
             <Offcanvas.Header closeButton closeLabel='Close' closeVariant='white'>
-              <Offcanvas.Title id='offcanvasNavbarLabel'>Springbridge</Offcanvas.Title>
+              <Offcanvas.Title id='offcanvasNavbarLabel' className='text-decoration-none fs-2' as={Link} to={'/'} >Springbridge</Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className='justify-content-end flex-grow-1 pe-3'>
-                <Nav.Link href='#about'>About</Nav.Link>
+                <Nav.Link href='#about' hidden >About</Nav.Link>
                 <NavDropdown title='Academics' id='offcanvasNavbarDropdown'
                 menuVariant='dark'>
-                  <NavDropdown.Item href='#overview'>Bilingual Program Overview</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href='#japanese'>Japanese Program 🇯🇵</NavDropdown.Item>
-                  <NavDropdown.Item href='#mandarin'>Mandarin Program 🇨🇳</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href='#prek-kinder'>
-                    Preschool﹣Kindergarten
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href='#elementary'>
-                    Elementary School
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href='#middle'>
-                    Middle School
-                  </NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to={'/overview'}>Bilingual Program Overview</NavDropdown.Item>
+                  <NavDropdown.Divider hidden />
+                  <NavDropdown.Item hidden >Japanese Program 🇯🇵</NavDropdown.Item>
+                  <NavDropdown.Item hidden >Mandarin Program 🇨🇳</NavDropdown.Item>
+                  <NavDropdown.Divider hidden />
+                  <NavDropdown.Item as={Link} to={'/preschool-kinder'}>Preschool﹣Kindergarten</NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to={'/elementary'}>Elementary School</NavDropdown.Item>
+                  <NavDropdown.Item hidden >Middle School</NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link href='#admissions'>{'Admissions & Tuition'}</Nav.Link>
-                <Nav.Link href='#calendar'>Calendar</Nav.Link>
-                <Nav.Link href='#staff'>{'Staff & Employment'}</Nav.Link>
-                <Nav.Link href='#faq'>FAQ</Nav.Link>
+                <Nav.Link as={Link} to={'/admissions'}>{'Admissions & Tuition'}</Nav.Link>
+                <Nav.Link as={Link} to={'/calendar'}>Calendar</Nav.Link>
+                <Nav.Link as={Link} to={'/staff'}>{'Staff & Employment'}</Nav.Link>
+                <Nav.Link hidden >FAQ</Nav.Link>
               </Nav>
               <Form className='d-flex my-3 container-fluid px-0'>
                 <FormControl
@@ -85,12 +84,17 @@ function Header() {
                 />
                 <Button className='rounded-pill px-3' variant='outline-light'>Search</Button>
               </Form>
-              <Button className='mt-3 rounded-pill p-3 w-50' variant='light'>School Portal</Button>
+              <Button className='mt-3 rounded-pill p-s w-70 fs-4' variant='light'>
+                <img className='me-2' src='./images/logo-sm.png' width='50' height='auto' />
+                School Portal
+              </Button>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
         </Container>
       </Navbar>
-      <div className='hero container-fluid d-flex flex-column-reverse flex-lg-row'>
+        
+
+      <section className='hero container-fluid d-flex flex-column-reverse flex-lg-row'>
         <div className='col-lg-6 p-0'>
           <img className='w-100' src='./images/kids-field.jpg' />
         </div>
@@ -123,7 +127,7 @@ function Header() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
       
     </header>
   );
