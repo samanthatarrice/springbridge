@@ -115,7 +115,7 @@ body {
   width: 70vw;
   aspect-ratio: 1;
   border: 1.25rem solid $green;
-  margin: 3rem;
+  margin: 0 3rem 3rem 3rem;
   
   .quick-fact-title {
     font-size: 5rem;
@@ -136,4 +136,48 @@ body {
 
 .quick-fact-container:nth-of-type(3) {
   border: 1.25rem solid $gold;
+}
+
+.testimonies {
+  background: $red;
+  color: white;
+  margin-top: 3rem;
+
+  .quote {
+    width: 5rem;
+  }
+
+  .quote:nth-of-type(1) {
+    transform: scaleX(-1);
+  }
+
+  .quote:nth-of-type(2) {
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  .blockquote-footer {
+    color: white;
+
+  }
+
+}
+
+.yelp-logo {
+  width: 15%; 
+}
+
+.locations {
+  background: $gold;
+
+  .locations-title {
+    font-family: $display-font;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  .location-text {
+    font-size: 1.75rem;
+  }
 }

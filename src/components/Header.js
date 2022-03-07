@@ -45,14 +45,14 @@ function Header() {
                 <Nav.Link href='#staff'>{'Staff & Employment'}</Nav.Link>
                 <Nav.Link href='#faq'>FAQ</Nav.Link>
               </Nav>
-              <Form className='d-flex my-3'>
+              <Form className='d-flex my-3 container-fluid px-0'>
                 <FormControl
+                  className='me-2'
                   type='search'
                   placeholder='Search'
-                  className='me-2'
                   aria-label='Search'
                 />
-                <Button className='rounded-pill' variant='outline-light'>Search</Button>
+                <Button className='rounded-pill px-3' variant='outline-light'>Search</Button>
               </Form>
               <Button className='mt-3 rounded-pill p-3 w-50' variant='light'>School Portal</Button>
             </Offcanvas.Body>
