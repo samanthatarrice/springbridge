@@ -1,0 +1,139 @@
+@import "~bootstrap/scss/bootstrap";;
+
+$navy: #313552;
+$red: #B8405E;
+$green: #2EB086;
+$gold: #EEC373;
+
+$display-font: 'Zilla Slab', serif;
+
+/*-----------------------------
+            Header
+-----------------------------*/
+
+.page-title {
+  font-family: $display-font;
+  font-size: 4rem;
+  font-weight: bold;
+  color: $red;
+  margin: 4vw;
+}
+
+.page-description {
+  font-size: 2rem;
+  margin: 6vw;
+}
+
+body {
+  color: $navy;
+}
+
+.navbar {
+  background: $green;
+}
+
+.logo-sm {
+  width: 60px;
+  height: auto;
+}
+
+.school-name {
+  margin-left: 1rem;
+  font-family: $display-font;
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: $navy;
+  vertical-align: middle;
+}
+
+#offcanvasNavbar {
+  background: $navy;
+  color: #FFF;
+
+  a {
+    color: #FFF;
+  }
+
+  #offcanvasNavbarLabel {
+    font-family: $display-font;
+  }
+
+  .dropdown-menu-dark {
+    background: $navy;
+    border: none;
+  }
+}
+
+.hero {
+  padding: 0;
+  margin: 0;
+  margin-top: 76px;
+
+  .owl {
+    width: 30%;
+    height: auto;
+  }
+
+  h1, h2 {
+    font-family: $display-font;
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+    color: $green;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+    color: $red;
+    text-transform: uppercase;
+  }
+}
+
+/*-----------------------------
+            Home
+-----------------------------*/
+
+.enrollment-btn {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: $gold;
+  border: none;
+}
+
+.enrollment-btn:hover {
+  background: $red;
+}
+
+.quick-fact-container {
+  width: 70vw;
+  aspect-ratio: 1;
+  border: 1.25rem solid $green;
+  margin: 3rem;
+  
+  .quick-fact-title {
+    font-size: 5rem;
+    font-family: $display-font;
+    font-weight: bold;
+  }
+
+  img {
+    width: 30%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+.quick-fact-container:nth-of-type(2) {
+  border: 1.25rem solid $red;
+}
+
+.quick-fact-container:nth-of-type(3) {
+  border: 1.25rem solid $gold;
+}

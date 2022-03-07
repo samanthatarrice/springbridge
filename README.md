@@ -73,3 +73,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 Clean up create-react-app: https://youtu.be/PAqbIbdvTuU
 Installing and using Sass: https://www.w3schools.com/react/react_sass_styling.asp
+Using React-Bootstrap: https://www.pluralsight.com/guides/how-to-set-up-a-react-bootstrap-app
